@@ -38,6 +38,8 @@ squest_redis:
 # Django
 squest_django:
   image: "quay.io/hewlettpackardenterprise/squest:latest"
+  path_to_nginx_conf: '../docker/nginx.conf'
+  path_to_ldap_config_py: '../Squest/ldap_config.py'
   ingress:  # default ingress based on nginx controller
     enabled: true
     host: "squest.{{ k8s_cluster_fqdn }}"
