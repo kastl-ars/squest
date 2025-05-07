@@ -68,3 +68,8 @@ squest_django:
     # ssh_user: "squest_k8s_dev"
     # ssh_server: "remote.server.ssh.net"
     # remote_path: "/backup/squest_k8s_dev/"
+
+# Nginx maintenance
+nginx_maintenance:
+  path_to_nginx_conf: '../docker/maintenance.nginx.conf'
+  path_to_nginx_html: '../docker/maintenance.html'
