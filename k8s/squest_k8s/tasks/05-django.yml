@@ -171,7 +171,7 @@
           service: nginx
         name: nginx-config
       data:
-        nginx.conf: "{{ lookup('file', playbook_dir + '/' + squest_django.path_to_nginx_conf) }}"
+        nginx.conf: "{{ lookup('file', squest_django.path_to_nginx_conf) }}"
 
 - name: Set the path of the ldap config from the user config or use default
   ansible.builtin.set_fact:
