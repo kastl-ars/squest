@@ -179,7 +179,7 @@
       {% if 'ldap' in squest_django %}
       {{ squest_django.ldap.ldap_config_file }}
       {% else %}
-      {{ lookup('file', playbook_dir + '/' + squest_django.path_to_ldap_config_py) }}
+      {{ lookup('file', squest_django.path_to_ldap_config_py) }}
       {% endif %}
 
 - name: LDAP config
