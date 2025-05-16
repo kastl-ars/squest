@@ -15,7 +15,7 @@
         nginx.conf: "{{ lookup('file', nginx_maintenance.path_to_nginx_conf) }}"
         maintenance.html: "{{ lookup('file', nginx_maintenance.path_to_nginx_html) }}"
       binaryData:
-        squest_logo_v2_300_300.png: "{{ lookup('file', playbook_dir + '/../project-static/squest/img/squest_logo_v2_300_300.png') | b64encode }}"
+        squest_logo_v2_300_300.png: "{{ lookup('file', 'squest_logo_v2_300_300.png') | b64encode }}"
 
 - name: Deploy maintenance static page
   kubernetes.core.k8s:
